@@ -1,0 +1,13 @@
+h1, p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+}
+
+
+
+picture {
+    padding: 20px;
+}
+
