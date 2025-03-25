@@ -141,3 +141,6 @@ main {
     margin: auto;
 }
 
+#nav-menu {
+    border: 2px solid rgb(241, 241, 241);
+}
