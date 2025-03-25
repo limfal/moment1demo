@@ -160,6 +160,7 @@ img {
     grid-template-columns: 1fr;
     gap: 10px;
     padding-top: 100px;
+    padding-bottom: 70px;
 }
 
 @media (min-width: 830px) {
