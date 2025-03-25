@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
+    <script src="js/main.js" type="module"></script>
 </head>
 <body>
+    <header>
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+        </button>
+        <nav id="nav-menu">
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+            </button>
+            <ul>
+                <li><a href="index.html">start</a></li>
+                <li><a href="photos.html">photos</a></li>
+            </ul>
+        </nav>
+        <h1><a href="index.html">demowebbplats
+    </header>
     <div class="pictures">
         <picture>
             <source srcset="images/testbild1.jpg?as=avif&width=400" type="image/avif">
