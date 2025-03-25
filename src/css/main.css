@@ -12,7 +12,7 @@ body {
 
 header {
     height: 80px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     background-color: white;
     position: relative;
@@ -170,4 +170,9 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding-top: 100px;
-}}
+}
+
+header {
+    max-width: 1200px;
+}
+}
