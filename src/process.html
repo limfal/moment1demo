@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Moment1demo</title>
     <script src="js/main.js" type="module"></script>
 </head>
+
 <body>
     <header>
         <button class="menu-btn open" id="open-menu">
@@ -31,21 +33,58 @@
         </nav>
         <h1><a href="index.html">demowebb</a></h1>
     </header>
-        <main>
-            <h2>Arbetsprocessen</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aspernatur officia esse excepturi voluptates obcaecati sit nam, perferendis ratione quisquam ipsum illo ea blanditiis nulla corrupti optio nostrum alias dicta!</p>
-            <h3>Boilerplate</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo id tempore adipisci asperiores eligendi sint quod aliquam vero amet, unde, accusamus nobis aliquid beatae officia, eaque qui architecto quaerat?</p>
-            <h4>Parcel och grundstruktur</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, maiores sunt non, laboriosam illo veniam totam necessitatibus facilis iusto voluptatum suscipit aliquid amet vitae provident. Iusto, similique? Nisi, nulla doloremque?</p>
-            <h4>Inställningar, justeringar och tillägg</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nesciunt veritatis exercitationem dignissimos sapiente adipisci et harum vel cum sunt at commodi obcaecati modi, aspernatur porro esse, perferendis voluptas magni.</p>
-            <h3>Demowebb</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, asperiores molestias velit eius rerum magni saepe iste esse, architecto neque quis quam totam! At vitae aperiam adipisci fuga suscipit eaque?</p>
-            <h4>Design och uppbyggnad</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, odit! Perferendis culpa temporibus, ab tempore quas distinctio nam illum quasi natus, magni numquam. Illo delectus culpa, iusto quisquam earum ab.</p>
-            <h4>Branching och publicering</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam assumenda accusantium, soluta provident quis esse enim molestiae recusandae nisi repellat deleniti sint quod hic impedit, adipisci vel. Animi, esse.</p>
-        </main>
+    <main>
+        <h1>Arbetsprocessen</h1>
+        <p>Arbetet med den här webbplatsen är tvådelat vilket speglas i följande beskrivning. Först gjorde jag en
+            återanvändbar så kallad boilerplate, en kodmall där jag satte upp allt som typiskt behövs för varje
+            webbplats och sen gick gjorde jag en kopia på den och la till allt specifikt för den här uppgiften. </p>
+        <h2>Boilerplate</h2>
+        <h3>Parcel och grundstruktur</h3>
+        <p>Först av allt skapade jag alltså en grundmall. Jag började med att skapa en mapp och göra den till ett
+            npm-projekt genom terminal-kommandot "npm init" och öppnade den i VS Code. Detta skapar automatiskt en
+            package j.son-fil som sen kan modifieras. Jag tog bort ett par rader (main och script) som jag inte skulle
+            behöva. Sen öppnade jag terminalen i VS Code och installerade Parcel. Jag ville ha den som en
+            dev-dependency, alltså något som bara används under utvecklingen och inte i den färdiga produkten så jag
+            använde kommandot "npm install parcel --save-dev". Det la automatiskt till devDependencies till
+            package.json-filen och jag la också till ett par scripts: "start": "parcel" och "build": "parcel build", för
+            att kunna köra och bygga själva webbplatsen. </p>
+        <p>Så var det dags att skapa mappstruktur för html, css och så vidare. Jag började med att lägga till en
+            "source": "src/index.html" i package.json-filen. Src-mappen är standard för den här typen av projekt. I
+            denna la jag till en index.html-fil med en grundstruktur för html, en css-mapp med en main.css-fil, en
+            js-mapp med en main.js-fil (innehållande en console.log med "hello world" för testning) och slutligen en
+            images-mapp för bilder.
+            Jag länkade också till css och js i index.html genom "link rel="stylesheet" href="css/ main.css"" och
+            "script src="js/main.js" type="module"". Jag testkörde alltihop med terminalkommandot npm run start, vilket
+            använder parcel och kör en sorts liveserver.</p>
+        <h3>Git och Github</h3>
+        <p>Jag skapade en .gitignore-fil där jag la in "node_modules/", "package-lock.json", "dist/" och
+            ".parcel-cache", kort sagt allt som inte behövde sparas igen och igen då de återskapas när man sen bygger
+            den färdiga produkten (webbplatsen). Sen gjorde jag ett gitprojekt av det hela och kopplade det till github
+            så att boilerplate-koden ska vara enkel att komma åt för framtida projekt. </p>
+        <h3>Inställningar, justeringar och tillägg</h3>
+        <p>Jag gjorde inga jättestora justeringar från Parcels grundutförande. Jag la till "browserlist" : "> 0.5%, last
+            2 versions, not dead", vilket ger bakåtkompatibilitet automatiskt vid build och publicering. Man kan också
+            gå in och ändra inställningar för bilder, men jag valde att utnyttja faktumet att det här är ett så kallat
+            noll-konfigurationsverktyg. Jag la till ett par exempelbilder där jag använde picture-taggen för att göra
+            dem till avif-filer i första hand, webp i andra hand och i sista hand jpg. Jag gav dem också en automatisk
+            bredd på 400px. </p>
+        <h3>Automatisering</h3>
+        <p>Det som enligt uppgiftsbeskrivningen skulle automatiseras var minifiering av css och html, samt transpilering
+            och minifiering av JavaScript, vilket sker automatiskt genom parcel. Samma gäller som sagt för
+            bildoptimering och kopiering av arbetsfiler till mapp för publicering med optimerade filer. Jag ställde som
+            sagt också in bakåtkompatibiliteten.</p>
+        <h2>Demowebb</h2>
+        <h3>Design och uppbyggnad</h3>
+        <p>För demowebben här ville jag hålla designen så minimal som möjligt så jag valde att köra hamburgermeny i alla
+            skärmstorlekar och bara svart på vitt och inga konstigheter som distraherar från innehållet. För att göra
+            sidan mer responsiv så valde jag att ta bort inställningar för pixelstorlek för bilder så de kunde justeras
+            mer dynamiskt, men jag behöll boilerplatens bildformat. </p>
+        <h3>Branching och publicering</h3>
+        <p>För demowebben har jag använt Github i kombination men Netlify för publicering med automatiska uppdateringar
+            från main-branchen. Jag la också till en dev-branch för att inte behöva publicera allt innan det är klart.
+            Som build command använde jag npm run build (vilket fylldes i automatiskt av Netlify) och den som ska
+            publiceras är dist-katalogen, där de byggda filerna hamnar. </p>
+    </main>
 </body>
+
 </html>
